@@ -1,28 +1,29 @@
-### 0.1.0
-version: R++ #1
-- You can now make function with func ... {{ }} and void ... { }
-- print() syntax has been changed. You should write --> print("some text", variable); or use instead: print(f"sum = {variable1}, devision = {variable2}");
-- Added break if (condition) and continue if (condition). More usable for 'for-loop'
-- New variable type: double
-- For-loop has now the possibility to chose a step for number change:
-for (i in (z --> n); i++; target=n+1): --> for (i in (z --> n); i+m; target=n+1): //m is parameter for a step
-for (i in (n <-- z); i--; target=n+1): --> for (i in (n <-- z); i-m; target=n+1): //m is parameter for a step
-[Notice: the 1st example is for raising numbers and the 2nd is for decrease]
+### 0.2.0
+version: R++ #2
+- New library sys.io with only one function os_()
+- New variations for the following functions:
+1. print() has --> print(), pt(), console_log()
+2. input() has --> input(), ipt()
 
-- print() also got a separation parameters for a line.
-print("some text", sep.h.x); --> h = horizontal separation/spacing where x is amount of spaces
-print("some text", sep.v.y); --> v = vertical separation/spacing where y is amount of spaces
+- Added null but with specific function:
+>>> definition: null has rol as a value of a variable: e.g.' int b = null; ' and as a variable type: e.g. ' null a; '
+>>> you could add value for null in 2 different ways:
+-1- if it should be a number or decimal just type:
+>>
+null x;
+x --> x += 2; // '-->' means that variable x will gain 2 for its value.
+pt(x); // output will be: 2
+-2- As a text
+null x;
+x <-- "Question"; // or Question // '<--' means that x will accept only string-type
+console_log(x); //output will be: Question
+---
+>>> null as its value:
+int a = null;
 
-- New function in Math-library: factorial()
-- New library "Editing" which stays for work with texts (string). Functions:
-1. reverse() --> an variable or text will be spelled in reverse
-2. upper() --> small letters will becom ABCDE...
-3. lower() --> big letters will become abcde...
-4. length() --> the length of text in you variable or between brakets
-Execution of code:
+- Added return for functions of type func & void
 
-cd path\to\rrp\.\exe
-.\Rpp.exe "C:\Path\to\file\file.rpp"
+- break if () and continue if () --> conditional for loops
 
 You can download rplusplus.vsix on clicking the link in documentation.
 
