@@ -1,7 +1,11 @@
 ### 0.5.0
-version: YR++ #5
+version: YR #5
 > Fixed:
 -> Error YRPP0012: Invalid list element 'value', when you're trying to use a float/double as a list value.
+
+!>> Out of support
+
+Soon will new language arrive YR++ #1
 
 >> Extended:
 --> Library sys.io where extended from only one function os_() into 2 extra functions: 
@@ -20,7 +24,7 @@ version: YR++ #5
 
 >> Changed:
 ---> Library lists has 2 functions that were changed:
-- remove(list, index); -> was the only variant for deletion one element at time. But in YR++ #5 there is an option of multiple deletion: remove(list, [index, index1, ..., indexN]);
+- remove(list, index); -> was the only variant for deletion one element at time. But in YR #5 there is an option of multiple deletion: remove(list, [index, index1, ..., indexN]);
 - push(list, value/variable); was thy only element which could be added only at the end of a list. It was just like add(). But from now this function changes: 
 push(list, index, <</>>, value/variable); --> it allows you to add an element before or after the chosen index. Note: push() doesn't work with empty list, while add() is working well.
 
@@ -60,10 +64,10 @@ New command --help:
 usage: .\Yrpp.exe --help
 and you'll get the list of existing commands
 
-YR++ got its own way of creation Console Apps by using this command:
+YR got its own way of creation Console Apps by using this command:
 .\Yrpp.exe --compile "Path\to\yrpp\or\other\supported\extension\file.yrpp" "output.exe"
 
 Launching:
 .\Yrpp.exe output.exe
 
-Basic documentation could be found in this repository as "YR++ Doc"
+Basic documentation could be found in this repository as "YR Doc"
