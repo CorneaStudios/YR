@@ -5,7 +5,7 @@ version: YR #5
 
 !>> Out of support
 
-Soon will new language arrive YR++26
+Soon will new language arrive YR++
 
 >> Extended:
 --> Library sys.io where extended from only one function os_() into 2 extra functions: 
